@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:space_x_project/BaseUrl/API_Config.dart';
 import 'package:space_x_project/Models/spaceRocketModel.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SpaceListRepository {
   // ignore: missing_return
@@ -37,3 +38,6 @@ class SpaceListRepository {
     }
   }
 }
+
+final userProvider =
+    Provider<SpaceListRepository>((ref) => SpaceListRepository());
